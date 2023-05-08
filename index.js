@@ -1,8 +1,13 @@
 array = [];
-arrayLength = prompt('Enter an array length : ');
+
+do {
+    arrayLength = prompt('Enter an array length : ');
+} while (isNaN(arrayLength) || arrayLength <= 0);
 
 for (i = 0; i < arrayLength; i++) {
-    number = prompt(`Put ${i + 1} number of an array`);
+    do {
+        number = prompt(`Put ${i + 1} number of an array`);
+    } while (!number || isNaN(number));
     array.push(number);
 }
 
